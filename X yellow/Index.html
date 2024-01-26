@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Tools</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add your CSS styles here */
+
+        body {
+            margin: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #000; /* Set background color */
+            color: #fff; /* Set text color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow to the page */
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #FF5722; /* Set header background color */
+            color: #fff; /* Set header text color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow to the header */
+        }
+        
+        nav {
+            background-color: #555; /* Set navbar background color */
+            overflow: hidden;
+            transition: 0.5s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow to the navbar */
+            position: sticky;
+        }
+        
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 15px;
+            
+            /* Apply the glowing animation */
+            animation: glow 2s infinite;
+        }
+        
+        nav a:hover {
+            background-color: #000; /* Change color on hover */
+            color: #FF5722;
+        }
+        
+        /* Add the glow animation keyframes */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px #FF5722;
+            }
+            50% {
+                box-shadow: 0 0 20px #FF5722;
+            }
+            100% {
+                box-shadow: 0 0 5px #FF5722;
+            }
+        }
+        
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #333; /* Set card background color */
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow to the cards */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #FF5722; /* Set title text color */
+        }
+
+        .button {
+            display: block;
+            padding: 10px 15px;
+            background-color: #FF5722; /* Set button background color */
+            color: #fff; /* Set button text color */
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow to the buttons */
+            animation: buttonScale 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #000; /* Change button color on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: buttonScale 0.3s ease;
+        }
+
+        /* Add a new button scale animation */
+        @keyframes buttonScale {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .c{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fade-in">
+        <h1 style="font-size: 36px;">Tiny Tools</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="fade-in">
+        <a href="card1.html">Credits</a>
+        <!-- <a href="#">About</a>
+        <a href="#">Games</a>
+        <a href="#">Apps</a> -->
+        <!-- <a href="#" class="c">Contact</a> -->
+    </nav>
+
+    <!-- Card Container -->
+    <div class="card-container fade-in">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="cal/cal.jpeg" alt="Game 1">
+            <div class="card-content">
+                <h1 class="title">Calculator</h1>
+                <p>It typically includes functions for basic arithmetic operations such as addition, subtraction, multiplication, and division.</p>
+                <a class="button" href="cal/calc.html">Use</a>
+            </div>
+        </div>
+
+        <!-- Repeat similar structure for Cards 2 to 7 -->
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="Mole/Mole.jpeg" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Mole</h1>
+                <p>"The goal is to hit as many moles as possible within a limited time, testing the player's reflexes and hand-eye coordination.</p>
+                <a class="button" href="mole/index.html">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="SnakeGame/img/snake.jpeg" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Snake</h1>
+                <p>Keep your eye on the food.Navigate a growing snake, avoid collisions, and eat food for points. Game ends if snake hits itself or boundaries.</p>
+                <a class="button" href="SnakeGame/index.html">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="To do list/pad.jpeg" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">To Do List</h1>
+                <p>It allows users to manage their time and stay focused on important goals. Users often mark tasks as done or in progress to monitor their progress.</p>
+                <a class="button" href="To do list/list.html">Use</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pong/ping.jpeg" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Ping Pong</h1>
+                <p>Ping Pong, or table tennis, is a sport where players use paddles to hit a lightweight ball back and forth across a table divided by a net.</p>
+                <a class="button" href="pong/index.html">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="candy-crush-master/images/candy.jpeg" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Candy Crush</h1>
+                <p>"Candy Crush" is a popular match-three puzzle game where players swap adjacent candies to match three or more of the same color.</p>
+                <a class="button" href="candy-crush-master/index.html">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Quadratic.png" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Quadratic Equation Solver</h1>
+                <p>
+                    A quadratic equation solver implemented in HTML and JavaScript, allowing users to input coefficients (a, b, c) through a visually styled form.</p>
+                <a class="button" href="qc.html">Use</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="tic tac toe/Tic_tac_toe.png" alt="Game 2">
+            <div class="card-content">
+                <h1 class="title">Tic Tac Toe</h1>
+                <p>
+ Players take turns placing their symbol (X or O).The first player to create a horizontal, vertical, or diagonal line of three of their symbols wins.</p>
+                <a class="button" href="tic tac toe/index.html">Play Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+
+</body>
+
+</html>
+

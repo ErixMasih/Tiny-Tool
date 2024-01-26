@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: black;
+    }
+    nav {
+        display: flex;
+        position: fixed;
+        background-color:blueviolet;
+        padding: 10px;
+        box-align: right;
+        word-spacing: 4px;
+        font-size: large;
+        transition: step-end;
+        border-bottom-right-radius: 5px;
+        float: right;
+
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content:space-around ;
+    }
+    nav li {
+        margin: 0 10px;
+    }
+    nav a {
+        text-shadow:2px 2px 4px whitesmoke;
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: all 0.1s ease;
+        display: flex;
+        float: right;
+    }
+    nav a:hover {
+        color: blueviolet;
+        background-color:rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+        /* text-shadow:2px 2px 4px blueviolet; */
+    }
+    .dis
+    {
+        background-color: transparent;
+        color: #fff;
+        font-size: 36px;
+    }
+    #Erix
+    {
+        color: blueviolet;
+    }
+    .st
+    {
+        display: flex;
+        font-size: 75;
+        color: #ffffff;
+        float: left;
+        clear: right;
+        margin-top: 100px;
+    }
+    .rightsec
+    {
+        display: flex;
+        float: left;
+        clear: right;
+        position: sticky;
+        align-items: flex-end;
+    }
+    #element
+    {
+        color: blueviolet;
+    }
+</style>
+<body>
+    <main>
+		<span class="st">
+			<p>
+				Hi I'm <n id="Erix">Erix</n> 
+				<br/>
+				"<span id="element"> "a programmer!"</span>"
+				<br/>
+				this is all 
+				<br/>
+				about my <n id="Erix">life</n>
+			</p>
+		</span>
+		</main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Front-end developer','Back-end developer', 'Editor','Programmer'],
+      typeSpeed: 30,
+    });
+  </script>
+</body>
+</html>

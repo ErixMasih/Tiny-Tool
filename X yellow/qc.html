@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quadratic Equation Solver</title>
+        <style>
+            body {
+                background-color: #333;
+                color: #fff;
+                font-family: 'Arial', sans-serif;
+                text-align: center;
+                margin: 50px;
+            }
+    
+            p {
+                font-size: 1.2em;
+            }
+    
+            form {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            input {
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+    
+            input[type="submit"] {
+                background-color: #FFA500;
+                color: #333;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+    
+            input[type="submit"]:hover {
+                background-color: #333;
+                color: #FFA500;
+            }
+    
+            #output_text {
+                margin-top: 20px;
+                font-size: 1.2em;
+            }
+        </style>
+    
+        <script>
+            var a, b, c;
+            var outputText;
+            
+            function validate() {
+                // get the input
+                a = parseFloat(document.forms["input_form"]["aterm"].value);
+                b = parseFloat(document.forms["input_form"]["bterm"].value);
+                c = parseFloat(document.forms["input_form"]["cterm"].value);
+                
+                // validate a, b, and c
+                if (a == 0 || isNaN(a) || isNaN(b) || isNaN(c)) {
+                    outputText = "Please enter valid coefficients!";
+                } else {
+                    // calculate the result using x = (-b +- sqrt(b^2 - 4ac)) / 2a
+                    var discriminant = Math.pow(b, 2) - 4 * a * c;
+                    if (discriminant < 0) {
+                        outputText = "The equation has no real roots.";
+                    } else {
+                        var x1 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                        var x2 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                        outputText = "For the equation <strong>" + (a == 1 ? "" : a) + "x² + " + (b == 1 ? "" : b) + "x + " + c + " = 0</strong>, x can equal <strong>" + x1 + "</strong> or <strong>" + x2 + "</strong>";
+                    }
+                }
+                
+                // output the result (or errors)
+                document.getElementById("output_text").innerHTML = outputText;
+            }
+        </script>
+    </head>
+    
+    <body>
+    
+        <!-- <p><strong>a</strong>, <strong>b</strong>, and <strong>c</strong> of a quadratic equation of the form --><strong>ax² + bx + c = 0</strong></p> 
+        
+        <form name="input_form" action="javascript:validate();">
+            a: <input type="text" name="aterm" size="5" required>
+            b: <input type="text" name="bterm" size="5" required>
+            c: <input type="text" name="cterm" size="5" required>
+            <br><br>
+            <input type="submit" value="Calculate">
+        </form>
+        
+        <p id="output_text"></p>
+    
+    </body>
+    </html>
+    

@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+#board {
+    background-color: rgb(62, 103, 0);
+    border-top: 5px solid skyblue;
+    border-bottom: 5px solid skyblue;
+}

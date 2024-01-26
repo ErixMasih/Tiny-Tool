@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .background {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: transparent;
+            border-radius: 8px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        li.navitem {
+            float: left;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        a.navlink {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        a.navlink:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .search-bar {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Add styles for your search bar input if needed */
+        .search-bar input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0; /* Remove border-radius from the top-right */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px #3498db;
+            }
+            50% {
+                box-shadow: 0 0 20px #3498db;
+            }
+            100% {
+                box-shadow: 0 0 5px #3498db;
+            }
+        }
+
+        .glowing-button {
+            animation: glow 2s infinite;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        img {
+            float: right;
+            /* Adjust alignment as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="background">
+        Image that spans the full width of the screen 
+        <img src="Tiney tools.jpg" alt="Tiney Tools" class="background-image">
+    </div> -->
+
+    <!-- Search bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <!-- You can add a search button or additional elements here -->
+    </div>
+
+    <!-- Navigation bar -->
+    <ul class="navbar">
+        <li class="navitem"><a class="navlink" href="#">Home</a></li>
+        <li class="navitem"><a class="navlink" href="#">About</a></li>
+        <li class="navitem"><a class="navlink" href="card.html">Services</a></li>
+        <li class="navitem"><a class="navlink" href="#">Credits</a></li>
+    </ul>
+
+    <!-- Your page content goes here -->
+    <header class="hero">
+        <h1>Animated Card Stacks</h1>
+        <p>Click each stack to toggle it open and closed</p>
+    </header>
+
+    <ul class="cards">
+        <!-- Card 1 -->
+        <li class="card card-1">
+            <img src="http://lorempixel.com/400/250/city" />
+            <div class="content">
+                <h1>Card 1 Title</h1>
+                <p>Card description</p>
+            </div>
+        </li>
+        <!-- Card 2 -->
+        <li class="card card-2">
+            <img src="http://lorempixel.com/400/250/food" />
+            <div class="content">
+                <h1>Card 2 Title</h1>
+                <p>Card description</p>
+            </div>
+        </li>
+        <!-- Card 3 -->
+        <li class="card card-3">
+            <img src="http://lorempixel.com/400/250/animals" />
+            <div class="content">
+                <h1>Card 3 Title</h1>
+                <p>Card description</p>
+            </div>
+        </li>
+    </ul>
+
+    <hr />
+
+    <!-- Card Stacks with Grid Layout -->
+    <ul class="card-stacks">
+        <!-- Stack 1 -->
+        <li class="stack stack-1">
+            <ul class="cards-down">
+                <!-- Card 1 in Stack 1 -->
+                <li class="card card-1">
+                    <!-- ... (similar structure as above) -->
+                </li>
+                <!-- Card 2 in Stack 1 -->
+                <li class="card card-2">
+                    <!-- ... (similar structure as above) -->
+                </li>
+                <!-- Card 3 in Stack 1 -->
+                <li class="card card-3">
+                    <!-- ... (similar structure as above) -->
+                </li>
+            </ul>
+        </li>
+        <!-- Stack 2 and Stack 3 have similar structures -->
+    </ul>
+
+    <hr />
+
+    <!-- Split Card Layout -->
+    <ul class="cards-split">
+        <!-- Card 1 -->
+        <li class="card card-1">
+            <!-- ... (similar structure as above) -->
+        </li>
+        <!-- Card 2 -->
+        <li class="card card-2">
+            <!-- ... (similar structure as above) -->
+        </li>
+        <!-- Card 3 -->
+        <li class="card card-3">
+            <!-- ... (similar structure as above) -->
+        </li>
+    </ul>
+
+    <hr />
+
+    <!-- Delayed Split Card Layout -->
+    <ul class="cards-split-delay">
+        <!-- Card 1 -->
+        <li class="card card-1">
+            <!-- ... (similar structure as above) -->
+        </li>
+        <!-- Card 2 -->
+        <li class="card card-2">
+            <!-- ... (similar structure as above) -->
+        </li>
+        <!-- Card 3 -->
+        <li class="card card-3">
+            <!-- ... (similar structure as above) -->
+        </li>
+    </ul>
+
+    <!-- <script>
+        // Ensure jQuery is loaded before this script
+        jQuery(document).ready(function ($) {
+            $('ul.cards, ul.card-stacks, ul.cards-split, ul.cards-split-delay').on('click', function () {
+                $(this).toggleClass('transition');
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+
+</body>
+
+</html>
